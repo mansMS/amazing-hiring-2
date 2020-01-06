@@ -16,4 +16,4 @@ npm start
 
 ## Посмотреть на работу приложения можно тут
 
-https://mansms.github.io/AmazingHiring2/
+https://mansms.github.io/amazing-hiring-2/
