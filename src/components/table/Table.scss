@@ -6,6 +6,10 @@ table {
     padding: 10px;
   }
 
+  th {
+    cursor: pointer;
+  }
+
   tbody {
     td {
       border-bottom: 1px solid #000;
@@ -29,6 +33,7 @@ table {
       width: 8px;
       height: 1px;
       background-color: #000;
+      transition: all 0.3s ease 0s;
     }
   
     &::before {

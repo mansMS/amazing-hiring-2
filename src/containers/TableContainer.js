@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setTableData } from '../reducers/tableData';
 import Table from '../components/table';
+import Spinner from '../components/spinner';
 
 class TableContainer extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class TableContainer extends Component {
   }
 
   render() {
-    if (this.props.loading) return <p>loading</p>
+    if (this.props.loading) return <Spinner />
     return (
       <Table
         tableData={this.props.tableData}

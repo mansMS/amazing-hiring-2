@@ -1,11 +1,16 @@
 import React from 'react';
-import classes from './Spinner.module.scss';
+import './Spinner.scss';
 
 const Spinner = () => {
   return (
-    <div className={classes.Spinner}>
-      <div className={classes.SpinnerIcon}>
-        <div className={classes.SpinnerHelper}></div>
+    <div className="Spinner">
+      <div className="SpinnerElements">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
   )
