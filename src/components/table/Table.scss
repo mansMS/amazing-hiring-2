@@ -1,0 +1,62 @@
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 10px;
+  }
+
+  tbody {
+    td {
+      border-bottom: 1px solid #000;
+      font-size: 14px;
+    }
+  }
+
+  .asc,
+  .desc {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 9px;
+    margin:  0 0 1px 3px;
+  
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 8px;
+      height: 1px;
+      background-color: #000;
+    }
+  
+    &::before {
+      left: 0;
+    }
+  
+    &::after {
+      left: 42%;
+    }
+  }
+  
+  .asc {
+    &::before {
+      transform: rotate(-45deg);
+    }
+  
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+  
+  .desc {
+    &::before {
+      transform: rotate(45deg);
+    }
+  
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
