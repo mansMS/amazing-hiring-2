@@ -1,4 +1,4 @@
-# AmazongHiring2
+# AmazingHiring2
 
 Тестовое задание отсюда: https://github.com/blmzv/ah-frontend-intern/wiki/Тестовое-задание
 
