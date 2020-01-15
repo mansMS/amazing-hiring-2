@@ -9,9 +9,9 @@ const Table = ({ tableData, changeSortingParams, sortField, sortDirection }) => 
 
   const sortedTableContent = tableData.sort((a, b) => {
     if (sortDirection === 'asc') {
-      if (a[sortField] < b[sortField]) return -1
+      if (a[sortField].toUpperCase() < b[sortField].toUpperCase()) return -1
     } else {
-      if (a[sortField] > b[sortField]) return -1
+      if (a[sortField].toUpperCase() > b[sortField].toUpperCase()) return -1
     }
     return 0
   });
