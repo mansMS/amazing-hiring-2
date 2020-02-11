@@ -29,16 +29,16 @@ class TableContainer extends Component {
   changeSortingParams(e) {
     if (!this.state.sortDirection
       || this.state.sortDirection === 'desc'
-      || this.state.sortField !== e.target.getAttribute('value')) {
+      || this.state.sortField !== e.currentTarget.getAttribute('value')) {
       this.setState({ sortDirection: 'asc' });
       localStorage["AmazingHiringTable"] =
-        JSON.stringify({ sortField: e.target.getAttribute('value'), sortDirection: 'asc' });
+        JSON.stringify({ sortField: e.currentTarget.getAttribute('value'), sortDirection: 'asc' });
     } else {
       this.setState({ sortDirection: 'desc' })
       localStorage["AmazingHiringTable"] =
-        JSON.stringify({ sortField: e.target.getAttribute('value'), sortDirection: 'desc' });
+        JSON.stringify({ sortField: e.currentTarget.getAttribute('value'), sortDirection: 'desc' });
     }
-    this.setState({ sortField: e.target.getAttribute('value') });
+    this.setState({ sortField: e.currentTarget.getAttribute('value') });
   }
 
   render() {

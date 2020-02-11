@@ -21,11 +21,13 @@ const Table = ({ tableData, changeSortingParams, sortField, sortDirection }) => 
   return (
     <table>
       <thead>
-        <tr onClick={changeSortingParams}>
+        <tr >
           {tableHeaders.map((columnName, index) =>
-            <th key={index} value={columnName}>
-              {columnName}
-              {sortField === columnName && <span className={sortDirection}></span>}
+            <th key={index}>
+              <span onClick={changeSortingParams} value={columnName}>
+                {columnName}
+                {sortField === columnName && <span className={sortDirection}></span>}
+              </span>
             </th>
           )}
         </tr>
