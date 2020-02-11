@@ -8,10 +8,12 @@ const Table = ({ tableData, changeSortingParams, sortField, sortDirection }) => 
   const tableHeaders = Object.keys(tableData[0]);
 
   const sortedTableContent = tableData.sort((a, b) => {
-    if (sortDirection === 'asc') {
-      if (a[sortField].toUpperCase() < b[sortField].toUpperCase()) return -1
-    } else {
-      if (a[sortField].toUpperCase() > b[sortField].toUpperCase()) return -1
+    if (sortField) {
+      if (sortDirection === 'asc') {
+        if (a[sortField].toUpperCase() < b[sortField].toUpperCase()) return -1
+      } else {
+        if (a[sortField].toUpperCase() > b[sortField].toUpperCase()) return -1
+      }
     }
     return 0
   });
